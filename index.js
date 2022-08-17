@@ -13,6 +13,6 @@ app.get('/ping', (req, res) => {
   })
 })
 
-app.listen(PORT, () => {
-  console.log('Server started listening on PORT : ' + PORT)
+app.listen(process.env.PORT || 8082, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`)
 })
