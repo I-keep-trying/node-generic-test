@@ -1,7 +1,7 @@
-const express = require('express')
 require('dotenv').config()
+const express = require('express')
 
-const PORT = process.env.PORT || 8082
+const PORT = process.env.PORT || 3002
 
 const app = express()
 
@@ -27,6 +27,6 @@ app.get('/ping', (req, res) => {
   })
 })
 
-app.listen(process.env.PORT || 8082, '0.0.0.0', () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`)
 })
