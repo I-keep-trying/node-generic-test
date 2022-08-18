@@ -27,6 +27,14 @@ app.get('/ping', (req, res) => {
   })
 })
 
+app.get('/ping2', (req, res) => {
+  return res.send({
+    error: false,
+    message: 'Server is still healthy',
+  })
+})
+
+
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`)
 })
